@@ -41,4 +41,5 @@ document.getElementById("control-back").addEventListener("click", () => {
     document.getElementById("question-root").style.display = "block";
     document.getElementById("input-root").classList.add("input");
     document.getElementById("input-root").style.display = "block";
+    currentQuestion = "root";
 });
