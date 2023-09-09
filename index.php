@@ -108,6 +108,7 @@ if (mysqli_connect_errno()) exit("Error with the Database");
     </div>
     <div class="control-messages"></div>
   </main>
+  <script src="https://assets.noten-app.de/js/jquery/jquery-3.6.1.min.js"></script>
   <script src="questions.js"></script>
 </body>
 
