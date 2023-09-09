@@ -81,3 +81,9 @@ main>* {
     font-size: 1rem;
     display: block;
 }
+
+textarea {
+    font-size: 1.5rem !important;
+    resize: vertical;
+    transition: 0s;
+}
