@@ -15,6 +15,7 @@ const questions = document.getElementsByClassName("questions");
 const inputs = document.getElementsByClassName("inputs");
 
 let currentQuestion = "root";
+let lastQuestion = "";
 
 document.getElementById("control-submit").addEventListener("click", () => {
     hideAll();
@@ -35,10 +36,21 @@ document.getElementById("control-submit").addEventListener("click", () => {
         const textQuestion = document.getElementById("question-last-text");
         textQuestion.classList.add("question");
         textQuestion.style.display = "block";
+        lastQuestion = currentVal;
         currentQuestion = "description";
         document.getElementById("control-submit").innerHTML = '<i class="fa-solid fa-envelope"></i>';
     } else {
-
+        $.ajax({
+            type: "POST",
+            url: "submit.php",
+            data: {
+                "path": lastQuestion,
+                "description": document.getElementById("input-last-text").value
+            },
+            success: function (data) {
+                location.assign("success");
+            }
+        });
     }
 });
 
