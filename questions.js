@@ -17,10 +17,10 @@ const inputs = document.getElementsByClassName("inputs");
 let currentQuestion = "root";
 
 document.getElementById("control-submit").addEventListener("click", () => {
-    const currentVal = document.getElementById("input-" + currentQuestion).value;
     hideAll();
-    const nextQuestion = document.getElementById("question-" + currentVal);
     if (currentQuestion == "root") {
+        const currentVal = document.getElementById("input-" + currentQuestion).value;
+        const nextQuestion = document.getElementById("question-" + currentVal);
         nextQuestion.classList.add("question");
         nextQuestion.style.display = "block";
         const nextInput = document.getElementById("input-" + currentVal);
@@ -28,6 +28,7 @@ document.getElementById("control-submit").addEventListener("click", () => {
         nextInput.style.display = "block";
         currentQuestion = currentVal;
     } else if (currentQuestion != "description") {
+        const currentVal = document.getElementById("input-" + currentQuestion).value;
         const textInput = document.getElementById("input-last-text");
         textInput.classList.add("input");
         textInput.style.display = "block";
