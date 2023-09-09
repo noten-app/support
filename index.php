@@ -110,6 +110,7 @@ if (mysqli_connect_errno()) exit("Error with the Database");
   </main>
   <script src="https://assets.noten-app.de/js/jquery/jquery-3.6.1.min.js"></script>
   <script src="questions.js"></script>
+  <script src="https://tools.kondev.de/tools/under-construction.js"></script>
 </body>
 
 </html>
