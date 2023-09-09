@@ -35,6 +35,7 @@ document.getElementById("control-submit").addEventListener("click", () => {
         textQuestion.classList.add("question");
         textQuestion.style.display = "block";
         currentQuestion = "description";
+        document.getElementById("control-submit").innerHTML = '<i class="fa-solid fa-envelope"></i>';
     } else {
 
     }
@@ -54,4 +55,5 @@ document.getElementById("control-back").addEventListener("click", () => {
     document.getElementById("input-root").classList.add("input");
     document.getElementById("input-root").style.display = "block";
     currentQuestion = "root";
+    document.getElementById("control-submit").innerHTML = '<i class="fa-solid fa-forward-step"></i>';
 });
