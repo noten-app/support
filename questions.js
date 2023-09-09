@@ -20,12 +20,24 @@ document.getElementById("control-submit").addEventListener("click", () => {
     const currentVal = document.getElementById("input-" + currentQuestion).value;
     hideAll();
     const nextQuestion = document.getElementById("question-" + currentVal);
-    nextQuestion.classList.add("question");
-    nextQuestion.style.display = "block";
-    const nextInput = document.getElementById("input-" + currentVal);
-    nextInput.classList.add("input");
-    nextInput.style.display = "block";
-    currentQuestion = currentVal;
+    if (currentQuestion == "root") {
+        nextQuestion.classList.add("question");
+        nextQuestion.style.display = "block";
+        const nextInput = document.getElementById("input-" + currentVal);
+        nextInput.classList.add("input");
+        nextInput.style.display = "block";
+        currentQuestion = currentVal;
+    } else if (currentQuestion != "description") {
+        const textInput = document.getElementById("input-last-text");
+        textInput.classList.add("input");
+        textInput.style.display = "block";
+        const textQuestion = document.getElementById("question-last-text");
+        textQuestion.classList.add("question");
+        textQuestion.style.display = "block";
+        currentQuestion = "description";
+    } else {
+
+    }
 });
 
 hideAll();
