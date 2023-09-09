@@ -92,6 +92,13 @@ if (mysqli_connect_errno()) exit("Error with the Database");
       </option>
       <option value="other-other">Other</option>
     </select>
+    <!-- QL -->
+    <div class="questions question" id="question-last-text">
+      Please describe your Problem<br>
+      <span class="small">You can write in German or English</span>
+    </div>
+    <textarea class="inputs input" id="input-last-text" name="" cols="30" rows="10"></textarea>
+
     <!-- Other controls -->
     <div class="control-back" id="control-back">
       <i class="fa-solid fa-house"></i>
